@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -68,9 +67,9 @@
                 <div class="row">
                     <div class="left-text col-lg-6 col-md-12 col-sm-12 col-xs-12"
                         data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-                        <h1>BỘ ĐÔI</br>
-                            MAPIX 40SL</br>COMBIPLUS.A</h1>
-                        <p style="font-size:25px;">GIẢI PHÁP NÔNG NGHIỆP AN TOÀN</p>
+                        <h3>GIẢI PHÁP KIẾN TẠO NĂNG SUẤT XANH</h3>
+                        <h1>MAPIX 40SL</br>COMBIPLUS.A</h1>
+                        <p style="font-size:20px;">KÍCH RỄ NHIỀU LÔNG - CHỒI TO THÂN CỨNG</p>
                         <a href="#contact-us" class="main-button-slider">LIÊN HỆ NGAY</a>
                     </div>
                 </div>
@@ -157,33 +156,36 @@
                 <div class="right-text offset-lg-1 col-lg-6 col-md-12 col-sm-12 mobile-bottom-fix">
                     <ul>
                         <li data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-                            <img src="assets/images/bvtd.png" width="100px" height="100px" alt=""
-                                style="border: solid #83b78e;">
+                            <img src="assets/images/dhst.png" width="100px" height="100px" alt=""
+                                style="border: solid #7cc08a;">
                             <div class="text">
-                                <h4>Bảo vệ toàn diện</h4>
-                                <p>Bảo vệ toàn diện năng suất ruộng lúa. Mepiquatchloride kích hoạt cơ chế hataps thụ
-                                    canxi, ức chế các nhóm chất gây giãn dài tế bào, giúp ngắn và dày lóng lúa, các bẹ
-                                    lúa bó chặc vào thân tăng cường sự cứng cáp cho cây lúa.
+                                <h4>Giải pháp "Kiến tạo năng suất xanh" với bộ đôi MAPIX 40SL và COMBIPLUS.A</h4>
+                                <p> "Kích rễ nhiều lông - chồi to thân cứng" là sự lựa chọn tối ưu để giúp cây lúa phát
+                                    triển toàn diện ở giai đoạn đẻ nhánh. Sự cộng hưởng mạnh mẽ giữa chất điều hòa sinh
+                                    trưởng và các chất trung vi lượng đã góp phần cường lực cho cây lúa với bộ rễ khỏe,
+                                    nhiều lông hút hấp thu dưỡng chất một cách tối ưu, thân cứng cáp, bẹ ôm sát thân hạn
+                                    chế đổ ngã, tăng cường số chồi hữu hiệu từ đó giúp bà con tiết kiệm được lượng phân
+                                    bón đáng kể, giảm áp lực chi phí ở thời kỳ đầu và nâng cao năng suất giai đoạn sau.
                                 </p>
                             </div>
                         </li>
-                        <li data-scroll-reveal="enter right move 30px over 0.6s after 0.5s">
+                        <!-- <li data-scroll-reveal="enter right move 30px over 0.6s after 0.5s">
                             <img src="assets/images/dhst.png" width="100px" height="100px" alt=""
-                                style="border: solid #83b78e;">
+                                style="border: solid #7cc08a;">
                             <div class="text">
                                 <h4>Điều hòa sinh trưởng</h4>
                                 <p>
                                     Việc kết hợp sử dụng MAPIX 40LS và COMBIPLUS.A trong quy trình canh tác lúa không
                                     chỉ giúp điều
-                                    hòa sinh trưởng mà còn nâng cao năng suất và chất lượng sản phẩm. Bằng cách áp dụng
+                                    hòa sinh trưởng mà còn kiến tạo năng suất xanh và chất lượng sản phẩm. Bằng cách áp dụng
                                     đúng liều lượng và thời điểm sử dụng, người nông dân có thể tận dụng tối đa hiệu quả
                                     của hai loại thuốc này, đảm bảo mùa màng bội thu và sản phẩm lúa đạt chất lượng cao.
                                 </p>
                             </div>
-                        </li>
-                        <li data-scroll-reveal="enter right move 30px over 0.6s after 0.6s">
+                        </li> -->
+                        <!-- <li data-scroll-reveal="enter right move 30px over 0.6s after 0.6s">
                             <img src="assets/images/gdc.png" width="100px" height="100px" alt=""
-                                style="border: solid #83b78e;">
+                                style="border: solid #7cc08a;">
                             <div class="text">
                                 <h4>Giải độc cho cây</h4>
                                 <p>Giải độc cho cây lúa là một biện pháp hiệu quả nhằm phục hồi sức khỏe và màu xanh của
@@ -193,7 +195,7 @@
                                     màu xanh, tăng cường sức đề kháng và khả năng chống chịu với các điều kiện bất lợi.
                                 </p>
                             </div>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>
@@ -212,9 +214,9 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
                     data-scroll-reveal="enter bottom move 30px over 0.6s after 0.4s">
-                    <div class="features-item">
+                    <div class="features-item user">
                         <div class="features-icon">
-                            <img src="assets/images/user1.png" alt="Ảnh đại diện" width="100%" height="100%"
+                            <img src="assets/images/chuba.png" alt="Ảnh đại diện" width="100%" height="100%"
                                 style="border-radius:0% !important;">
                             <p>"Ra rễ quá trời, nhiều lông hút, nở bụi to, thân to cứng chắc như bắp luôn. Tôi sài cái
                                 này là tôi chịu rồi đó, tôi phái này rồi đó cho 10 điểm luôn!!!"</p>
@@ -231,15 +233,14 @@
                     data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
                     <div class="features-item">
                         <div class="features-icon">
-                            <img src="assets/images/user1.png" alt="Ảnh đại diện" width="100%" height="100%"
+                            <img src="assets/images/user2.png" alt="Ảnh đại diện" width="100%" height="100%"
                                 style="border-radius:0% !important;">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo dolor ad qui iure maxime
-                                fugit corporis odit aspernatur veniam harum excepturi commodi rerum temporibus a ducimus
-                                rem, unde nisi. Consequatur.</p>
+                            <p>"Bộ rễ rất là tốt rất là dài, chồi to, thân cây lúa cứng cáp như cái cột đình. Tui công
+                                nhận rất hiệu quả, mùa này là hết xảy à nghe"</p>
                             <div class="testimonial-meta pt-half">
-                                <strong class="testimonial-name test_name">Tên người đánh giá</strong>
+                                <strong class="testimonial-name test_name">Chú Hoàng</strong>
                                 <span class="testimonial-name-divider"> / </span>
-                                <span class="testimonial-company test_company">Tỉnh</span>
+                                <span class="testimonial-company test_company">Châu Thành A, Hậu Giang</span>
                                 <span class="testimonial-company test_company">(OM18)</span>
                             </div>
                         </div>
@@ -249,15 +250,14 @@
                     data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
                     <div class="features-item">
                         <div class="features-icon">
-                            <img src="assets/images/user1.png" alt="Ảnh đại diện" width="100%" height="100%"
+                            <img src="assets/images/user3.png" alt="Ảnh đại diện" width="100%" height="100%"
                                 style="border-radius:0% !important;">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci deleniti sit pariatur
-                                praesentium, minus tempore excepturi voluptate voluptatum ipsum dolorum consectetur quos
-                                ratione quae. Quo dolor eaque quidem iure doloribus?</p>
+                            <p>"Ra rễ mạnh, nhiều lông hút, chồi mập lắm. Thấy hiệu quả, xịt 2 chai đó là thấy hay đại
+                                tài luôn đó, năm nay quá là ngon lành"</p>
                             <div class="testimonial-meta pt-half">
-                                <strong class="testimonial-name test_name">Tên người đánh giá</strong>
+                                <strong class="testimonial-name test_name"></br>Chú Cường</strong>
                                 <span class="testimonial-name-divider"> / </span>
-                                <span class="testimonial-company test_company">Tỉnh</span>
+                                <span class="testimonial-company test_company">Ngã Năm, Sóc Trăng</span>
                                 <span class="testimonial-company test_company">(OM18)</span>
                             </div>
                         </div>
@@ -311,11 +311,9 @@
                 <div></div>
                 <span style="float:right;" class="close-button">&times;</span>
             </div>
-
             <form id="contactForm">
                 <label for="name">Tên Đại Lý</label>
                 <input type="text" id="name" name="name" required>
-
                 <label for="phone">Số Điện Thoại</label>
                 <input type="number" id="phone2" name="phone2" required>
                 <small id="phoneError2" class="form-text text-danger" style="display:none; margin-bottom:10px">SĐT đã
@@ -326,6 +324,7 @@
                 <input type="text" id="address" name="address" required>
                 <input id="role" name="role" hidden value="Đại lý">
                 <input id="status" name="status" hidden value="Cần xử lý">
+                <input id="area" name="area" hidden value="Đại lý">
                 <label for="note">Câu hỏi cần giải đáp (nếu có)</label>
                 <input type="text" id="note" name="note">
                 <button type="submit">Gửi</button>
@@ -350,7 +349,7 @@
                     <div class="col-lg-6 col-md-12 col-sm-12">
                         <div class="contact-form">
                             <form id="addForm">
-                                <h3 class="mb-4">ĐĂNG KÝ NHẬN TƯ VẤN</h3>
+                                <h3 class="mb-4">NHẬN TƯ VẤN NGAY</h3>
                                 <div class="row">
                                     <div class="col-md-6 col-sm-12">
                                         <fieldset>
@@ -361,7 +360,7 @@
 
                                     <div class="col-md-6 col-sm-12">
                                         <fieldset>
-                                            <input name="phone" type="text" id="phone" placeholder="Số điện thoại"
+                                            <input name="phone" type="number" id="phone" placeholder="Số điện thoại"
                                                 required style="background-color: rgba(250,250,250,0.3);">
                                             <small id="lenghtError" class="form-text text-danger"
                                                 style="display:none; margin-bottom:10px">Độ dài SĐT không hợp lệ</small>
@@ -392,11 +391,15 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <fieldset>
-                                            <input name="note" rows="6" id="note" placeholder="Diện tích đất canh tác"
-                                                style="background-color: rgba(250,250,250,0.3);" required></input>
+                                            <select style="height:50px; color: #7A7A7A; border: 1px solid #eee;"
+                                                class="form-control mr-2" id="area" name="area" required>
+                                                <option value="">Diện tích canh tác</option>
+                                                <option value="1">Nhỏ hơn 5 hecta</option>
+                                                <option value="2">Từ 5 hecta trở lên</option>
+                                            </select>
                                         </fieldset>
                                     </div>
-                                    <div class="col-lg-12">
+                                    <div style="margin-top:25px;" class="col-lg-12">
                                         <fieldset>
                                             <button type="submit" class="main-button">Nhận tư vấn</button>
                                         </fieldset>
@@ -434,8 +437,6 @@
                     <div class="sub-footer">
                         <p style="text-align:center"><i class="fas fa-map-marker-alt"></i> Địa chỉ: 42 Mai Chí Thọ, P.
                             Phú Thứ, Q. Cái Răng, TP. Cần Thơ, Việt Nam</p>
-
-
                         <p style="text-align:center"><i class="fas fa-phone"></i> Hỗ trợ kỹ thuật: <a
                                 href="tel:0768868999">0768 868 999</a> | Hỗ trợ kinh doanh: <a
                                 href="tel:0866683968">0866 683 968</a></p>
@@ -460,6 +461,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- nhúng chatbox zalo -->
+    <div class="zalo-chat-widget" data-oaid="1883585238464712125" data-welcome-message="Rất vui khi được hỗ trợ bạn!"
+        data-autopopup="0" data-width="" data-height=""></div>
+    <script src="https://sp.zalo.me/plugins/sdk.js"></script>
 
     <!-- jQuery -->
     <script src="assets/js/jquery-2.1.0.min.js"></script>
@@ -561,7 +567,6 @@
 
             $('#addForm').on('submit', function (event) {
                 event.preventDefault();
-
                 // Gửi dữ liệu để thêm mới
                 $.ajax({
                     url: 'process_add_data.php',
@@ -583,7 +588,6 @@
 
             $('#contactForm').on('submit', function (event) {
                 event.preventDefault();
-
                 // Gửi dữ liệu để thêm mới
                 $.ajax({
                     url: 'add_data2.php',

@@ -108,6 +108,12 @@ $result = $conn->query($sql);
             <option value="Đang xử lý">Đang xử lý</option>
             <option value="Đã xử lý">Đã xử lý</option>
         </select>
+        <label for="Area" class="mr-2">Diện tích:</label>
+        <select class="form-control mr-2" id="areaFilter" name="area">
+            <option value="">Tất cả diện tích</option>
+            <option value="1">Dưới 5 hecta</option>
+            <option value="2">Từ 5 hecta</option>
+        </select>
         <button type="submit" class="btn btn-primary ml-auto" style="margin-right:1%">ALL DATA</button>
     </form>
     <table class="table table-striped mt-4">
@@ -120,7 +126,8 @@ $result = $conn->query($sql);
                 <th scope="col">Địa Chỉ</th>
                 <th scope="col">Người dùng</th>
                 <th scope="col">Trạng thái</th>
-                <th scope="col">Note</th>
+                <th scope="col">Diện tích</th>
+                <!-- <th scope="col">Note</th> -->
                 <th scope="col"></th>
             </tr>
         </thead>
@@ -170,6 +177,14 @@ $result = $conn->query($sql);
                             </select>
                         </div>
                         <div class="form-group">
+                            <label for="editArea">Diện tích</label>
+                            <select class="form-control mr-2" id="editArea" name="area">
+                                <option value="">Diện tích canh tác</option>
+                                <option value="1">Nhỏ hơn 5 hecta</option>
+                                <option value="2">Từ 5 hecta trở lên</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
                             <label for="editNote">Ghi Chú</label>
                             <textarea class="form-control" id="editNote" name="note" rows="4"></textarea>
                         </div>
@@ -183,12 +198,13 @@ $result = $conn->query($sql);
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        function openEditPopup(name, phone, address, role, status, note) {
+        function openEditPopup(name, phone, address, role, status, area, note) {
             $('#editName').val(name);
             $('#editPhone').val(phone);
             $('#editAddress').val(address);
             $('#editRole').val(role);
             $('#editStatus').val(status);
+            $('#editArea').val(area);
             $('#editNote').val(note);
             $('#editModal').modal('show');
         }
@@ -211,7 +227,7 @@ $result = $conn->query($sql);
             });
         });
 
-        function loadData(startDate = '', endDate = '', roleFilter = '', statusFilter = '') {
+        function loadData(startDate = '', endDate = '', roleFilter = '', statusFilter = '', areaFilter = '') {
             $.ajax({
                 url: 'load_data.php',
                 type: 'GET',
@@ -219,7 +235,8 @@ $result = $conn->query($sql);
                     start_date: startDate,
                     end_date: endDate,
                     role: roleFilter,
-                    status: statusFilter
+                    status: statusFilter,
+                    area: areaFilter
                 },
                 success: function (data) {
                     $('#customerData').html(data);
@@ -233,13 +250,14 @@ $result = $conn->query($sql);
         function loadDataWithFilters() {
             const startDate = $('#startDate').val();
             const endDate = $('#endDate').val();
-            const role = $('#roleFilter').val(); // Lấy giá trị user
-            const status = $('#statusFilter').val(); // Lấy giá trị trạng thái
-            loadData(startDate, endDate, role, status);
+            const role = $('#roleFilter').val(); 
+            const status = $('#statusFilter').val();
+            const area = $('#areaFilter').val();
+            loadData(startDate, endDate, role, status, area);
         }
 
         // Tự động gửi form lọc khi thay đổi giá trị
-        $('#startDate, #endDate, #roleFilter, #statusFilter').on('change', function () {
+        $('#startDate, #endDate, #roleFilter, #statusFilter, #areaFilter').on('change', function () {
             loadDataWithFilters(); // Gọi hàm loadDataWithFilters khi có thay đổi
         });
 
@@ -252,7 +270,8 @@ $result = $conn->query($sql);
             const endDate = document.getElementById('endDate').value;
             const role = document.getElementById('roleFilter').value;
             const status = document.getElementById('statusFilter').value;
-            const exportUrl = `export_data.php?start_date=${startDate}&end_date=${endDate}&role=${role}&status=${status}`;
+            const area = document.getElementById('areaFilter').value;
+            const exportUrl = `export_data.php?start_date=${startDate}&end_date=${endDate}&role=${role}&status=${status}&area=${area}`;
             window.location.href = exportUrl;
         });
 
