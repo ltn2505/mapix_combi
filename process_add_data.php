@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $address = $_POST['address'];
     $role = $_POST['role'];
     $status = $_POST['status'];
-    $note = $_POST['note'];
+    $area = $_POST['area'];
 
 
     // Kiểm tra xem số điện thoại có trùng lặp hay không
@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Số điện thoại đã tồn tại";
     } else {
         // Câu lệnh SQL thêm dữ liệu
-        $sql = "INSERT INTO customer (name, phone, address, role, status, note) VALUES ('$name', '$phone', '$address', '$role', '$status',  '$note')";
+        $sql = "INSERT INTO customer (name, phone, address, role, status, area) VALUES ('$name', '$phone', '$address', '$role', '$status', '$area')";
         if ($conn->query($sql) === TRUE) {
             echo "1";
         } else {

@@ -19,6 +19,7 @@ $start_time = isset($_GET['start_date']) ? $_GET['start_date'] : '';
 $end_time = isset($_GET['end_date']) ? $_GET['end_date'] : '';
 $role = isset($_GET['role']) ? $_GET['role'] : '';
 $status = isset($_GET['status']) ? $_GET['status'] : '';
+$area = isset($_GET['area']) ? $_GET['area'] : '';
 
 $valid_start = validateDate($start_time) ? $start_time . ' 00:00:00' : null;
 $valid_end = validateDate($end_time) ? $end_time . ' 23:59:59' : null;
@@ -35,7 +36,8 @@ $sheet->setCellValue('C1', 'Số Điện Thoại');
 $sheet->setCellValue('D1', 'Địa Chỉ');
 $sheet->setCellValue('E1', 'Người dùng');
 $sheet->setCellValue('F1', 'Trạng thái');
-$sheet->setCellValue('G1', 'Ghi chú');
+$sheet->setCellValue('G1', 'Diện tích');
+$sheet->setCellValue('H1', 'Ghi chú');
 
 // Set font for the entire spreadsheet to ensure proper Unicode support
 $defaultFont = [
@@ -71,6 +73,10 @@ if (!empty($status)) {
     $params[] = $status;
 }
 
+if (!empty($area)) {
+    $sql .= " AND area = ?";
+    $params[] = $area;
+}
 $sql .= " ORDER BY date_collect DESC";
 
 // Execute query using prepared statements
@@ -96,6 +102,15 @@ try {
         $address = mb_convert_encoding($data['address'], 'UTF-8', 'auto');
         $role = mb_convert_encoding($data['role'], 'UTF-8', 'auto');
         $status = mb_convert_encoding($data['status'], 'UTF-8', 'auto');
+        $area = mb_convert_encoding($data['area'], 'UTF-8', 'auto');
+        if ($data['area'] == 1) {
+            // Set the new key in the $data array
+            $area = '< 5 hecta';
+        }elseif ($data['area'] == 2) {
+            // Set the new key in the $data array
+            $area = '>= 5 hecta';
+        }
+        else  $area = '';
         $note = mb_convert_encoding($data['note'], 'UTF-8', 'auto');
 
         // Set cell values
@@ -105,7 +120,8 @@ try {
         $sheet->setCellValue('D' . $row, $address);
         $sheet->setCellValue('E' . $row, $role);
         $sheet->setCellValue('F' . $row, $status);
-        $sheet->setCellValue('G' . $row, $note);
+        $sheet->setCellValue('G' . $row, $area);
+        $sheet->setCellValue('H' . $row, $note);
         $row++;
     }
 
