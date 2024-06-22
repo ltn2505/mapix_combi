@@ -169,7 +169,7 @@ ul {
 }
 
 p {
-  font-size: 15px;
+  font-size: 17px;
   line-height: 23px;
   color: #000000;
   font-weight: 200;
@@ -794,7 +794,7 @@ welcome
   line-height: 80px;
   letter-spacing: 1px;
   margin-bottom: 30px;
-  color: #098f43;
+  color: #f07044;
 }
 
 .welcome-area .header-text h1 em {
@@ -806,9 +806,9 @@ welcome
 }
 
 .welcome-area .header-text p {
-  font-weight: 300;
+  font-weight: 700;
   font-size: 17px;
-  color: #7a7a7a;
+  color: #000000;
   line-height: 30px;
   letter-spacing: 0.25px;
   margin-bottom: 40px;
@@ -907,9 +907,16 @@ about
   border: solid 1px #098f43;
 }
 
+@media (max-width: 600px) {
+  .features-item img {
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+
 .features-item h4 {
   margin-top: 0px;
-  font-size: 13px;
+  font-size: 20px;
   font-weight: bold;
   color: #1e1e1e;
   margin-bottom: 25px;
@@ -966,10 +973,11 @@ promotion
 }
 
 #promotion .right-text h4 {
-  font-size: 22px;
+  font-size: 26px;
   color: #1e1e1e;
   margin-bottom: 15px;
   margin-top: 3px;
+  font-weight: 700;
 }
 
 /*
