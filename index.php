@@ -8,9 +8,9 @@
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="/assets/images/logo.png" />
     <title>BIOCROPSCIENCES VIỆT NAM</title>
@@ -24,6 +24,15 @@
 
     <link rel="stylesheet" href="assets/css/owl-carousel.css">
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7QH9NS167W"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-7QH9NS167W');
+    </script>
 </head>
 
 <body>
@@ -208,7 +217,8 @@
     <!-- ***** Testimonials Starts ***** -->
     <section class="section" id="testimonials">
         <div class="container">
-            <h2 style="margin-top:50px; text-align:center; font-weight: 20px; font-size:x-large;">CHIA SẺ CÙNG NHÀ NÔNG
+            <h2 style="margin-top:50px; text-align:center; font-weight: 20px;!important font-size:x-large;">CHIA SẺ</br>
+                CÙNG NHÀ NÔNG
             </h2>
 
             <div class="row">
@@ -371,8 +381,8 @@
 
                                     <div class="col-lg-12">
                                         <fieldset>
-                                            <input name="address" rows="6" id="address" placeholder="Địa chỉ" required
-                                                style="background-color: rgba(250,250,250,0.3);"></input>
+                                            <input name="address" rows="6" id="address" placeholder="Xã - Huyện"
+                                                required style="background-color: rgba(250,250,250,0.3);"></input>
                                         </fieldset>
                                     </div>
                                     <div class="col-lg-12">
@@ -447,7 +457,7 @@
 
                         <ul class="social">
                             <li><a href="https://www.facebook.com/profile.php?id=100083351821890"><i
-                                        class="fa fa-facebook"></i></a></li>
+                                        class="fa-brands fa-facebook-f"></i></a></li>
                             <li><a href="https://zalo.me/1883585238464712125"><i><img src="assets/images/zalo.png"
                                             width="44px" height="44px" alt="zalo"></i></a></li>
                             <li><a href="https://www.tiktok.com/@biocropsciencesvn?lang=vi-VN"><i
@@ -465,7 +475,8 @@
     <!-- nhúng chatbox zalo -->
     <div class="zalo-chat-widget" data-oaid="1883585238464712125" data-welcome-message="Rất vui khi được hỗ trợ bạn!"
         data-autopopup="0" data-width="" data-height=""></div>
-    <script src="https://sp.zalo.me/plugins/sdk.js"></script>
+    <!-- <script src="https://sp.zalo.me/plugins/sdk.js"></script> -->
+    <script src="assets/js/zalo_chat.js"></script>
 
     <!-- jQuery -->
     <script src="assets/js/jquery-2.1.0.min.js"></script>
@@ -520,7 +531,9 @@
                 $.ajax({
                     url: 'check_phone.php',
                     type: 'POST',
-                    data: { phone: phone },
+                    data: {
+                        phone: phone
+                    },
                     success: function (response) {
                         if (response === 'invalid') {
                             $('#lenghtError').show();
@@ -546,7 +559,9 @@
                 $.ajax({
                     url: 'check_phone.php',
                     type: 'POST',
-                    data: { phone: phone },
+                    data: {
+                        phone: phone
+                    },
                     success: function (response) {
                         if (response === 'invalid') {
                             $('#lenghtError2').show();
