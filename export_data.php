@@ -20,7 +20,7 @@ $end_time = isset($_GET['end_date']) ? $_GET['end_date'] : '';
 $role = isset($_GET['role']) ? $_GET['role'] : '';
 $status = isset($_GET['status']) ? $_GET['status'] : '';
 $area = isset($_GET['area']) ? $_GET['area'] : '';
-
+$city = isset($_GET['city']) ? $_GET['city'] : '';
 $valid_start = validateDate($start_time) ? $start_time . ' 00:00:00' : null;
 $valid_end = validateDate($end_time) ? $end_time . ' 23:59:59' : null;
 
@@ -37,7 +37,8 @@ $sheet->setCellValue('D1', 'Địa Chỉ');
 $sheet->setCellValue('E1', 'Người dùng');
 $sheet->setCellValue('F1', 'Trạng thái');
 $sheet->setCellValue('G1', 'Diện tích');
-$sheet->setCellValue('H1', 'Ghi chú');
+$sheet->setCellValue('H1', 'Nguồn');
+$sheet->setCellValue('I1', 'Ghi chú');
 
 // Set font for the entire spreadsheet to ensure proper Unicode support
 $defaultFont = [
@@ -77,6 +78,10 @@ if (!empty($area)) {
     $sql .= " AND area = ?";
     $params[] = $area;
 }
+if (!empty($city)) {
+    $sql .= " AND city = ?";
+    $params[] = $city;
+}
 $sql .= " ORDER BY date_collect DESC";
 
 // Execute query using prepared statements
@@ -111,6 +116,7 @@ try {
             $area = '>= 5 hecta';
         }
         else  $area = '';
+        $city = mb_convert_encoding($data['city'], 'UTF-8', 'auto');
         $note = mb_convert_encoding($data['note'], 'UTF-8', 'auto');
 
         // Set cell values
@@ -121,7 +127,8 @@ try {
         $sheet->setCellValue('E' . $row, $role);
         $sheet->setCellValue('F' . $row, $status);
         $sheet->setCellValue('G' . $row, $area);
-        $sheet->setCellValue('H' . $row, $note);
+        $sheet->setCellValue('H' . $row, $city);
+        $sheet->setCellValue('I' . $row, $note);
         $row++;
     }
 

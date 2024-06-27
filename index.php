@@ -265,7 +265,7 @@
                             <p>"Ra rễ mạnh, nhiều lông hút, chồi mập lắm. Thấy hiệu quả, xịt 2 chai đó là thấy hay đại
                                 tài luôn đó, năm nay quá là ngon lành"</p>
                             <div class="testimonial-meta pt-half">
-                                <strong class="testimonial-name test_name"></br>Chú Cường</strong>
+                                <strong class="testimonial-name test_name">Chú Cường</strong>
                                 <span class="testimonial-name-divider"> / </span>
                                 <span class="testimonial-company test_company">Ngã Năm, Sóc Trăng</span>
                                 <span class="testimonial-company test_company">(OM18)</span>
@@ -407,6 +407,13 @@
                                                 <option value="1">Nhỏ hơn 5 hecta</option>
                                                 <option value="2">Từ 5 hecta trở lên</option>
                                             </select>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <fieldset>
+                                            <input name="city" rows="6" id="city" placeholder="Role"
+                                                style="background-color: rgba(250,250,250,0.3);" hidden
+                                                value="Biocrop"></input>
                                         </fieldset>
                                     </div>
                                     <div style="margin-top:25px;" class="col-lg-12">

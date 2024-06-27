@@ -968,7 +968,7 @@ promotion
 #promotion .right-text img {
   display: inline-block;
   float: left;
-  margin-right: 30px;
+  margin: 15px 20px 15px 0;
   border-radius: 50%;
 }
 
@@ -1453,7 +1453,7 @@ footer .sub-footer p {
   letter-spacing: 0.5px;
 }
 .support-info p {
-  margin-bottom: 10px; /* Tạo khoảng cách dưới cùng giữa các đoạn văn bản */
+  margin-bottom: 10px; /* Táº¡o khoáº£ng cÃ¡ch dÆ°á»›i cÃ¹ng giá»¯a cÃ¡c Ä‘oáº¡n vÄƒn báº£n */
 }
 @media (max-width: 991px) {
   footer .copyright {
