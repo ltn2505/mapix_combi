@@ -154,39 +154,17 @@
       </span>
     </div>
     <!-- preloader end -->
-    <!-- search box -->
-    <div class="search-box position-relative overflow-hidden w-100">
-      <div class="search-wrap">
-        <div class="close-button position-absolute">
-          <svg class="close" width="22" height="22">
-            <use xlink:href="#close"></use>
-          </svg>
-        </div>
-        <form id="search-form" class="text-center pt-3" action="" method="">
-          <input
-            type="text"
-            class="search-input fs-5 p-4 bg-transparent"
-            placeholder="Search..."
-          />
-          <svg class="search" width="22" height="22">
-            <use xlink:href="#search"></use>
-          </svg>
-        </form>
-      </div>
-    </div>
-    <!-- search box end -->
-
+    
     <!-- header start -->
     <header id="header" class="site-header text-black">
       <nav id="header-nav" class="navbar navbar-expand-lg px-3 mb-3">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="#">
             <img
               src="../cayluacantho/images/logobiocrop.png"
               class="logo"
               style="width: 115px; height: 80px"
             />
-
             <img
               src="../cayluacantho/images/logocaylua.png"
               class="logo"
@@ -854,25 +832,23 @@
           <div class="row d-flex flex-wrap justify-content-between">
             <div class="col-lg-3 col-sm-6 pb-3 pe-4">
               <div class="footer-menu" style="font-size: 20px; font-family: var(--body-font);">
+              <h5 class="widget-title pb-2">VỀ CHÚNG TÔI</h5>
                 <p>
                   “Đồng hành cùng bà con, chia sẻ giải pháp mới - hiệu quả - tiết kiệm” <br>
                   Cây Lúa Cần Thơ được xây dựng nhằm mục đích:
                   <ul style="list-style: none; text-decoration: none; padding-left: 0px; font-size: 18px;">
-                    <li>- Cập nhật tình hình canh tác lúa trong khu vực Cần Thơ          
+                    <li>Cập nhật tình hình canh tác lúa trong khu vực Cần Thơ          
                     </li>
-                    <li>- Chia sẻ kỹ thuật canh tác, sâu bệnh hại trên lúa
+                    <li>Chia sẻ kỹ thuật canh tác, sâu bệnh hại trên lúa
                     </li>
-                    <li>- Ứng dụng những tiến bộ kỹ thuật mới trong canh tác lúa
+                    <li>Ứng dụng những tiến bộ kỹ thuật mới trong canh tác lúa
                     </li>
-                    <li>- Giúp bà con tiết kiệm chi phí, tăng năng suất, tăng lợi nhuận
+                    <li>Giúp bà con tiết kiệm chi phí, tăng năng suất, tăng lợi nhuận
                     </li>
 
                   </ul>
                   
                 </p>
-              </div>
-              <div class="copyright">
-                <p>© Copyright 2023.</p>
               </div>
             </div>
             <div class="col-lg-2 col-sm-6 pb-3">
@@ -886,13 +862,13 @@
                     <a href="#about-us">Giới thiệu</a>
                   </li>
                   <li class="menu-item pb-2">
-                    <a href="#company-services">Công dụng</a>
+                    <a href="#featured-products">Công dụng</a>
                   </li>
                   <li class="menu-item pb-2">
-                    <a href="#latest-blog">Thực Chiến</a>
+                    <a href="#video">Thực Chiến</a>
                   </li>
                   <li class="menu-item pb-2">
-                    <a href="#contact">Liên hệ</a>
+                    <a href="#subscribe">Liên hệ</a>
                   </li>
                 </ul>
               </div>
