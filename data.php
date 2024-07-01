@@ -68,6 +68,14 @@ $result = $conn->query($sql);
         .status-cancelled {
             color: #0080ff;
         }
+
+        @media (min-width: 576px) {
+            .form-inline .form-control {
+                display: inline-block;
+                width: 150px;
+                vertical-align: middle;
+            }
+        }
     </style>
     <!-- Logout -->
     <script type="text/javascript">
@@ -97,24 +105,34 @@ $result = $conn->query($sql);
         <input type="date" id="endDate" name="end_date" class="form-control mr-2">
         <label for="endDate" class="mr-2">Người dùng:</label>
         <select class="form-control mr-2" id="roleFilter" name="role">
-            <option value="">Tất cả người dùng</option>
+            <option value="">Tất cả</option>
             <option value="Cá nhân">Cá nhân</option>
             <option value="Đại lý">Đại lý</option>
         </select>
         <label for="endDate" class="mr-2">Trạng thái:</label>
         <select class="form-control mr-2" id="statusFilter" name="status">
-            <option value="">Tất cả trạng thái</option>
+            <option value="">Tất cả</option>
             <option value="Cần xử lý">Cần xử lý</option>
             <option value="Đang xử lý">Đang xử lý</option>
             <option value="Đã xử lý">Đã xử lý</option>
         </select>
         <label for="Area" class="mr-2">Diện tích:</label>
         <select class="form-control mr-2" id="areaFilter" name="area">
-            <option value="">Tất cả diện tích</option>
+            <option value="">Tất cả</option>
             <option value="1">Dưới 5 hecta</option>
             <option value="2">Từ 5 hecta</option>
         </select>
-        <button type="submit" class="btn btn-primary ml-auto" style="margin-right:1%">ALL DATA</button>
+        <label for="City">Nguồn</label>
+        <select class="form-control mr-2" id="cityFilter" name="city">
+            <option value="">Tất cả</option>
+            <option value="Biocrop">Biocrop</option>
+            <option value="CT">CT</option>
+            <option value="KG">KG</option>
+            <option value="HG">HG</option>
+            <option value="ST">ST</option>
+            <option value="ĐT">ĐT</option>
+        </select>
+        <!-- <button type="submit" class="btn btn-primary ml-auto" style="margin-right:1%">ALL DATA</button> -->
     </form>
     <table class="table table-striped mt-4">
         <thead class="thead-dark">
@@ -127,7 +145,7 @@ $result = $conn->query($sql);
                 <th scope="col">Người dùng</th>
                 <th scope="col">Trạng thái</th>
                 <th scope="col">Diện tích</th>
-                <!-- <th scope="col">Note</th> -->
+                <th scope="col">Nguồn</th>
                 <th scope="col"></th>
             </tr>
         </thead>
@@ -185,6 +203,17 @@ $result = $conn->query($sql);
                             </select>
                         </div>
                         <div class="form-group">
+                            <label for="editCity">Nguồn</label>
+                            <select class="form-control mr-2" id="editCity" name="city">
+                                <option value="">Nguồn dữ liệu</option>
+                                <option value="CT">CT</option>
+                                <option value="KG">KG</option>
+                                <option value="HG">HG</option>
+                                <option value="ST">ST</option>
+                                <option value="ĐT">ĐT</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
                             <label for="editNote">Ghi Chú</label>
                             <textarea class="form-control" id="editNote" name="note" rows="4"></textarea>
                         </div>
@@ -198,13 +227,14 @@ $result = $conn->query($sql);
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        function openEditPopup(name, phone, address, role, status, area, note) {
+        function openEditPopup(name, phone, address, role, status, area, city, note) {
             $('#editName').val(name);
             $('#editPhone').val(phone);
             $('#editAddress').val(address);
             $('#editRole').val(role);
             $('#editStatus').val(status);
             $('#editArea').val(area);
+            $('#editCity').val(city);
             $('#editNote').val(note);
             $('#editModal').modal('show');
         }
@@ -227,7 +257,7 @@ $result = $conn->query($sql);
             });
         });
 
-        function loadData(startDate = '', endDate = '', roleFilter = '', statusFilter = '', areaFilter = '') {
+        function loadData(startDate = '', endDate = '', roleFilter = '', statusFilter = '', areaFilter = '', cityFilter = '') {
             $.ajax({
                 url: 'load_data.php',
                 type: 'GET',
@@ -236,7 +266,8 @@ $result = $conn->query($sql);
                     end_date: endDate,
                     role: roleFilter,
                     status: statusFilter,
-                    area: areaFilter
+                    area: areaFilter,
+                    city: cityFilter
                 },
                 success: function (data) {
                     $('#customerData').html(data);
@@ -250,14 +281,15 @@ $result = $conn->query($sql);
         function loadDataWithFilters() {
             const startDate = $('#startDate').val();
             const endDate = $('#endDate').val();
-            const role = $('#roleFilter').val(); 
+            const role = $('#roleFilter').val();
             const status = $('#statusFilter').val();
             const area = $('#areaFilter').val();
-            loadData(startDate, endDate, role, status, area);
+            const city = $('#cityFilter').val();
+            loadData(startDate, endDate, role, status, area, city);
         }
 
         // Tự động gửi form lọc khi thay đổi giá trị
-        $('#startDate, #endDate, #roleFilter, #statusFilter, #areaFilter').on('change', function () {
+        $('#startDate, #endDate, #roleFilter, #statusFilter, #areaFilter, #cityFilter').on('change', function () {
             loadDataWithFilters(); // Gọi hàm loadDataWithFilters khi có thay đổi
         });
 
@@ -271,7 +303,8 @@ $result = $conn->query($sql);
             const role = document.getElementById('roleFilter').value;
             const status = document.getElementById('statusFilter').value;
             const area = document.getElementById('areaFilter').value;
-            const exportUrl = `export_data.php?start_date=${startDate}&end_date=${endDate}&role=${role}&status=${status}&area=${area}`;
+            const city = document.getElementById('cityFilter').value;
+            const exportUrl = `export_data.php?start_date=${startDate}&end_date=${endDate}&role=${role}&status=${status}&area=${area}&city=${city}`;
             window.location.href = exportUrl;
         });
 

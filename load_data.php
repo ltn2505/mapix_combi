@@ -8,6 +8,8 @@ $end_date = isset($_GET['end_date']) ? $_GET['end_date'] : '';
 $role = isset($_GET['role']) ? $_GET['role'] : '';
 $status = isset($_GET['status']) ? $_GET['status'] : '';
 $area = isset($_GET['area']) ? $_GET['area'] : '';
+$city = isset($_GET['city']) ? $_GET['city'] : '';
+
 
 // Tăng thêm 1 ngày vào end_date nếu có giá trị
 if (!empty($end_date)) {
@@ -39,6 +41,10 @@ if (!empty($status)) {
 if (!empty($area)) {
     $sql .= " AND area = ?";
     $params[] = $area;
+}
+if (!empty($city)) {
+    $sql .= " AND city = ?";
+    $params[] = $city;
 }
 
 $sql .= " ORDER BY date_collect DESC";
@@ -89,8 +95,9 @@ if ($result->num_rows > 0) {
                 break;
         }
         echo "</td>";
+        echo "<td>" . htmlspecialchars($row['city']) . "</td>";
         // echo "<td>" . htmlspecialchars($row['note']) . "</td>";
-        echo "<td><button class='btn btn-primary' onclick='openEditPopup(\"" . (isset($row['name']) ? htmlspecialchars($row['name']) : "") . "\", \"" . (isset($row['phone']) ? htmlspecialchars($row['phone']) : "") . "\", \"" . (isset($row['address']) ? htmlspecialchars($row['address']) : "") . "\", \"" . (isset($row['role']) ? htmlspecialchars($row['role']) : "") . "\", \"" . (isset($row['status']) ? htmlspecialchars($row['status']) : "") . "\", \"" . (isset($row['area']) ? htmlspecialchars($row['area']) : "") . "\", \"" . (isset($row['note']) ? htmlspecialchars($row['note']) : "") . "\")'>Edit</button></td>";
+        echo "<td><button class='btn btn-primary' onclick='openEditPopup(\"" . (isset($row['name']) ? htmlspecialchars($row['name']) : "") . "\", \"" . (isset($row['phone']) ? htmlspecialchars($row['phone']) : "") . "\", \"" . (isset($row['address']) ? htmlspecialchars($row['address']) : "") . "\", \"" . (isset($row['role']) ? htmlspecialchars($row['role']) : "") . "\", \"" . (isset($row['status']) ? htmlspecialchars($row['status']) : "") . "\", \"" . (isset($row['area']) ? htmlspecialchars($row['area']) : "") . "\",\"" . (isset($row['city']) ? htmlspecialchars($row['city']) : "") . "\", \"" . (isset($row['note']) ? htmlspecialchars($row['note']) : "") . "\")'>Edit</button></td>";
         echo "</tr>";
         $counter++; // Increment counter
     }
