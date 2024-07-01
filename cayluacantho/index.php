@@ -553,7 +553,7 @@
     <footer id="footer" class="overflow-hidden" style="margin-top: 15px">
         <!-- contact start -->
         <section class="subscribe" id="subscribe" style="
-            background-image: url(../cayluacantho/images/bông\ bự\,\ nù\ bông\ \(2\).jpg);
+            background-image: url(../cayluacantho/images/bongbunubong4.jpg);
             background-size: cover;
             margin-bottom: 50px;
             height: 800px;
