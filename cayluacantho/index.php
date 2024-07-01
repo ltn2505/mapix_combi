@@ -732,7 +732,7 @@
 
             // Kiểm tra số điện thoại có tồn tại hay không
             $.ajax({
-                url: 'check_phone.php',
+                url: '../check_phone.php',
                 type: 'POST',
                 data: {
                     phone: phone
