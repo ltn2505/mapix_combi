@@ -7147,6 +7147,7 @@ fieldset:disabled .btn {
   color: rgba(var(--bs-warning-rgb), var(--bs-text-opacity)) !important;
 }
 .text-danger {
+  background-color: white;
   --bs-text-opacity: 1;
   color: rgba(var(--bs-danger-rgb), var(--bs-text-opacity)) !important;
 }
